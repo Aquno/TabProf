@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Professores</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Lista de Professores</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Listar Professores</h1>
+            <h1>Lista de Professores</h1>
         </header>
 
-        <table>
+        <table id="tableProfessores">
             <thead>
                 <tr>
+                    <th>CPF</th>
                     <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Disciplina</th>
-                    <th>Ações</th>
+                    <th>Telefone</th>
+                    <th>Salário</th>
                 </tr>
             </thead>
             <tbody>
-                <!----------------------------------------------------------------------->
-                <tr>
-                    <td>João Silva</td>
-                    <td>joao.silva@gmail.com</td>
-                    <td>Matemática</td>
-                    <td>
-                        <a href="editar.html">Editar</a> |
-                        <a href="excluir.html">Excluir</a>
-                    </td>
-                </tr>
+                <!-- Os dados serão preenchidos com JavaScript -->
             </tbody>
         </table>
 
@@ -39,5 +35,7 @@
             <p><a href="index.html">Voltar para o menu</a></p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
