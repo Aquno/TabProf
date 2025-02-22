@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style/style.css" />
+
+    <title>Cadastrar Professor</title>
+</head>
+<body>
+    <div class="container" style="align-self: center; max-width: 450px; margin-top: 50px;">
+        <header>
+            <h1>Cadastrar Professor</h1>
+        </header>
+
+            <form id="formCadastrar" action="#" method="POST">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone">
+
+                <label for="salario">Salário:</label>
+                <input type="text" id="salario" name="salario">
+
+                <button type="submit">Cadastrar</button>
+            </form>
+
+        <footer>
+            <p><a href="../index.html">Voltar para o menu</a></p>
+        </footer>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <script src="/js/professores.js"></script>
+</body>
+</html>

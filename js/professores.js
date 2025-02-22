@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const professor = { cpf, nome, telefone, salario: salario || null };
 
       try {
-        const response = await fetch("http://localhost:3000/professor", {
+        const response = await fetch("http://localhost:3000/api/professores", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(professor)
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const professor = { cpf, nome, telefone: telefone || null, salario: salario || null };
 
       try {
-        const response = await fetch(`http://localhost:3000/professor/${id}`, {
+        const response = await fetch(`http://localhost:3000/api/professores/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(professor)
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/professor/${id}`, {
+        const response = await fetch(`http://localhost:3000/api/professores/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" }
         });
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/professor/${id}`, {
+        const response = await fetch(`http://localhost:3000/api/professores/${id}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" }
         });
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const tabelaBody = document.querySelector("#tableProfessores tbody");
 
     try {
-      const response = await fetch("http://localhost:3000/professores"); // Ajuste para o endpoint correto da sua API
+      const response = await fetch("http://localhost:3000/api/professores"); // Ajuste para o endpoint correto da sua API
 
       if (!response.ok) {
         throw new Error("Erro ao buscar os professores.");
