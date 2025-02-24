@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
           alert('Professor cadastrado com sucesso!');
-          window.location.href = "/TabProf";
+          window.location.href = "/html/index.html";
+
         } else {
           document.getElementById("mensagem").textContent = "Erro: " + data.error;
         }
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
           alert('Cadastro atualizado com sucesso!');
-          window.location.href = "/TabProf";
+          window.location.href = "/html/index.html";
         } else {
           document.getElementById("mensagem").textContent = "Erro: " + data.error;
         }
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
           alert('Professor deletado com sucesso!');
-          window.location.href = "/TabProf";
+          window.location.href = "/html/index.html";
         } else {
           document.getElementById("mensagem").textContent = "Erro: " + data.error;
         }

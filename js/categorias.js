@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
           if (response.ok) {
             alert("Categoria cadastrada com sucesso!");
-            window.location.href = "/TabCategorias";
+            window.location.href = "/html/index.html";
           } else {
             document.getElementById("mensagem").textContent = "Erro: " + data.error;
           }
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
           if (response.ok) {
             alert("Categoria excluída com sucesso!");
-            window.location.href = "/TabCategorias";
+            window.location.href = "/html/index.html";
           } else {
             document.getElementById("mensagem").textContent = "Erro: " + data.error;
           }

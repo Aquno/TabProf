@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
           if (response.ok) {
             alert("Faixa cadastrada com sucesso!");
-            window.location.href = "/TabFaixas";
+            window.location.href = "/html/index.html"; 
           } else {
             document.getElementById("mensagem").textContent = "Erro: " + data.error;
           }
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
           if (response.ok) {
             alert("Faixa excluída com sucesso!");
-            window.location.href = "/TabFaixas";
+            window.location.href = "/html/index.html"; 
           } else {
             document.getElementById("mensagem").textContent = "Erro: " + data.error;
           }

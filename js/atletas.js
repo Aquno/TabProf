@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
           alert('Atleta cadastrado com sucesso!');
-          window.location.href = "/TabAtletas"; // Redireciona após o cadastro
+          window.location.href = "/html/index.html"; // Redireciona após o cadastro
         } else {
           document.getElementById("mensagem").textContent = "Erro: " + data.error;
         }
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
           alert('Atleta atualizado com sucesso!');
-          window.location.href = "/TabAtletas"; // Redireciona após a atualização
+          window.location.href = "/html/index.html"; // Redireciona após a atualização
         } else {
           document.getElementById("mensagem").textContent = "Erro: " + data.error;
         }
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
           alert('Atleta excluído com sucesso!');
-          window.location.href = "/TabAtletas"; // Redireciona após exclusão
+          window.location.href = "/html/index.html"; // Redireciona após exclusão
         } else {
           document.getElementById("mensagem").textContent = "Erro: " + data.error;
         }
@@ -123,30 +123,34 @@ document.addEventListener("DOMContentLoaded", function() {
   // Função para buscar um atleta
   if (formBuscar) {
     formBuscar.addEventListener("submit", async function(event) {
-      event.preventDefault();
-
+      event.preventDefault(); // Evita recarregar a página
+  
       const id = document.getElementById("buscar").value;
       const resultadoBusca = document.getElementById("resultadoBusca");
-
+  
       resultadoBusca.innerHTML = "";
-
+  
       if (!id) {
         alert("Por favor, insira um ID válido!");
         return;
       }
-
+  
       try {
         const response = await fetch(`http://localhost:3000/api/atletas/${id}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" }
         });
-
+  
         const data = await response.json();
-
+  
+        console.log(data); // Depuração para verificar o que está sendo retornado
+  
         if (data && data.error) {
-          resultadoBusca.innerHTML = `<p style="text-align: center">ID inválido</p>`;
+          resultadoBusca.innerHTML = `
+           <p style="text-align: center">ID inválido</p>
+          `;
         }
-
+  
         if (data && !data.error) {
           resultadoBusca.innerHTML = `
             <div style="text-align: center">
@@ -167,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
 
   // Função para listar os atletas
   async function listarAtletas() {
