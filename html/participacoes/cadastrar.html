@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style/style.css" />
+
+    <title>Adicionar Participação</title>
+</head>
+<body>
+    <div class="container" style="align-self: center; max-width: 450px; margin-top: 50px;">
+        <header>
+            <h1>Adicionar Participação</h1>
+        </header>
+            <form id="formCadastrar" action="#" method="POST">
+                <label for="id_atleta">ID do Atleta:</label>
+                <input type="text" id="id_atleta" name="id_atleta" required>
+
+                <label for="id_categoria">ID Categoria:</label>
+                <input type="text" id="id_categoria" name="id_categoria" required>
+
+                <label for="id_competicao">ID Competição:</label>
+                <input type="text" id="id_competicao" name="id_competicao" required>
+
+                <label for="resultado">Resultado:</label>
+                <input type="text" id="resultado" name="resultado" required>
+
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+
+                <button type="submit">Adicionar</button>
+            </form>
+
+        <footer>
+            <p><a href="../index.html">Voltar para o menu</a></p>
+        </footer>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <script src="/js/participacoes.js"></script>
+</body>
+</html>

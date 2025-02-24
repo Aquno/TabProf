@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style/style.css" />
+
+    <title>Adicionar Progressão</title>
+</head>
+<body>
+    <div class="container" style="align-self: center; max-width: 450px; margin-top: 50px;">
+        <header>
+            <h1>Adicionar Progressão</h1>
+        </header>
+
+            <form id="formCadastrar" action="#" method="POST">
+                <label for="id_atleta">ID do Atleta:</label>
+                <input type="text" id="id_atleta" name="id_atleta" required>
+
+                <label for="data_graduacao">Data Progressão:</label>
+                <input type="date" id="data_graduacao" name="data_graduacao" required>
+
+                <label for="nova_faixa">Nova faixa:</label>
+                <input type="text" id="nova_faixa" name="nova_faixa" required>
+
+                <label for="observacao">Observação:</label>
+                <input type="text" id="observacao" name="observacao" required>
+
+                <button type="submit">Adicionar</button>
+            </form>
+
+        <footer>
+            <p><a href="../index.html">Voltar para o menu</a></p>
+        </footer>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <script src="/js/progressoes.js"></script>
+</body>
+</html>
